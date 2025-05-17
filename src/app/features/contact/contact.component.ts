@@ -14,6 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 import { AlertService } from '../../core/services/alert.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -52,7 +53,7 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     if (this.contactForm.invalid) {
       this.markFormGroupTouched(this.contactForm);
       return;
@@ -60,35 +61,45 @@ export class ContactComponent implements OnInit {
 
     this.isSubmitting = true;
 
-    // Here you would typically make an API call to send the email
-    // For now, we'll simulate a successful submission
-    setTimeout(() => {
+    const SERVICE_ID = 'service_epap3ed';
+    const NOTIFY_TEMPLATE_ID = 'template_d7lb1ee';
+    const AUTOREPLY_TEMPLATE_ID = 'template_l5np928';
+    const PUBLIC_KEY = 'Qn10vz3D7TY8kEzCp';
+
+    const templateParams = {
+      name: this.contactForm.value.name,
+      email: this.contactForm.value.email,
+      subject: this.contactForm.value.subject,
+      message: this.contactForm.value.message,
+    };
+
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        NOTIFY_TEMPLATE_ID,
+        templateParams,
+        PUBLIC_KEY
+      );
+      await emailjs.send(
+        SERVICE_ID,
+        AUTOREPLY_TEMPLATE_ID,
+        templateParams,
+        PUBLIC_KEY
+      );
       this.isSubmitting = false;
       this.alertService.success(
         'Message Sent!',
         'Your message has been sent successfully. I will get back to you soon.'
       );
       this.contactForm.reset();
-    }, 1500);
-
-    // For actual implementation, you would use EmailJS or a backend service:
-    /*
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-      from_name: this.contactForm.value.name,
-      reply_to: this.contactForm.value.email,
-      subject: this.contactForm.value.subject,
-      message: this.contactForm.value.message
-    }, 'YOUR_USER_ID')
-    .then(() => {
+    } catch (error) {
       this.isSubmitting = false;
-      this.alertService.success('Message Sent!', 'Your message has been sent successfully. I will get back to you soon.');
-      this.contactForm.reset();
-    }, (error) => {
-      this.isSubmitting = false;
-      this.alertService.error('Error', 'Failed to send message. Please try again later.');
+      this.alertService.error(
+        'Error',
+        'Failed to send message. Please try again later.'
+      );
       console.error('Error sending email:', error);
-    });
-    */
+    }
   }
 
   private markFormGroupTouched(formGroup: FormGroup): void {
