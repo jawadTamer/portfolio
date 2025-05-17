@@ -1,0 +1,168 @@
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center min-vh-75">
+      <div class="col-md-7 col-lg-7 hero-text-container">
+        <h1 class="hero-title" #heroTitle>
+          Hi, I'm <span class="highlight">Jawad Tamer</span>
+        </h1>
+        <p class="hero-subtitle" #heroSubtitle>
+          I'm a passionate Front-End Developer.I'm driven by curiosity and a
+          commitment to continuous growth. I enjoy learning new technologies and
+          applying them in practical projects. I love working in teams where I
+          can collaborate and grow alongside others.
+        </p>
+        <div class="hero-cta" #heroCta>
+          <a
+            mat-raised-button
+            color="primary"
+            routerLink="/projects"
+            class="me-3"
+            >View My Work</a
+          >
+          <a mat-stroked-button color="accent" routerLink="/contact"
+            >Contact Me</a
+          >
+        </div>
+      </div>
+      <div class="col-md-5 col-lg-5 mt-4 mt-md-0 text-center">
+        <div class="hero-image">
+          <div class="hero-image-placeholder">
+            <!-- Using optimized image component for profile -->
+            <app-optimized-image
+              src="assets/images/profile/profile.png"
+              alt="Jawad Tamer"
+              [width]="300"
+              [height]="300"
+              class="profile-image"
+              [priority]="true"
+            ></app-optimized-image>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+      <p>Check out some of my notable work</p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="project-card">
+          <div class="project-image">
+            <app-optimized-image
+              src="assets/images/projects/recipe-sharin.png"
+              alt="Recipes Sharing"
+              [width]="400"
+              [height]="225"
+              class="img-fluid"
+            ></app-optimized-image>
+          </div>
+          <div class="project-details">
+            <h3>Recipes Sharing</h3>
+            <p>A responsive recipe-sharing platform using Angular 18</p>
+            <a mat-button color="primary" routerLink="/projects"
+              >View Details</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="project-card">
+          <div class="project-image">
+            <app-optimized-image
+              src="assets/images/projects/hospital.jpg"
+              alt="Hospital Management System"
+              [width]="400"
+              [height]="225"
+              class="img-fluid"
+            ></app-optimized-image>
+          </div>
+          <div class="project-details">
+            <h3>Hospital Management System</h3>
+            <p>
+              System to manage patients and appointments with Angular 19 &
+              Firebase
+            </p>
+            <a mat-button color="primary" routerLink="/projects"
+              >View Details</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="project-card">
+          <div class="project-image">
+            <app-optimized-image
+              src="assets/images/projects/chatbot.jpg"
+              alt="AI Chatbot"
+              [width]="400"
+              [height]="225"
+              class="img-fluid"
+            ></app-optimized-image>
+          </div>
+          <div class="project-details">
+            <h3>AI Chatbot</h3>
+            <p>Interactive AI chatbot with real-time responses using APIs</p>
+            <a mat-button color="primary" routerLink="/projects"
+              >View Details</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <a mat-raised-button color="accent" routerLink="/projects"
+        >View All Projects</a
+      >
+    </div>
+  </div>
+</section>
+
+<section class="about-preview">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2>About Me</h2>
+        <p>
+          I'm a passionate front-end developer and a student at the Faculty of
+          Science (Math and Physics). I'm driven by curiosity and a commitment
+          to continuous growth. I enjoy learning new technologies and applying
+          them in practical projects. I love working in teams where I can
+          collaborate and grow alongside others.
+        </p>
+        <a mat-button color="primary" routerLink="/about"
+          >Learn More About Me</a
+        >
+      </div>
+      <div class="col-lg-6">
+        <div class="skills-preview">
+          <h3>My Skills</h3>
+          <ul class="skill-tags">
+            <li>HTML5, CSS3, JavaScript, TypeScript, C#, MySQL</li>
+            <li>Angular, familiarity with React.js</li>
+            <li>Bootstrap, Responsive Design</li>
+            <li>APIs, JSON Server, Firebase</li>
+            <li>Git & GitHub</li>
+            <li>Problem Solving & Debugging</li>
+            <li>Familiarity with Node.js</li>
+            <li>Familiarity with MVC</li>
+            <li>Familiarity with SQL Server</li>
+            <li>Familiarity with LINQ</li>
+            <li>Familiarity with ASP.NET Core</li>
+            <li>Material UI</li>
+            <li>GSAP</li>
+            <li>Familiarity with Entity Framework</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

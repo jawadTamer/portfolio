@@ -1,0 +1,167 @@
+<section class="contact-section">
+  <div class="container">
+    <div class="section-header">
+      <h1>Contact Me</h1>
+      <p>Have a question or want to work together? Feel free to reach out!</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <mat-card class="contact-info-card">
+          <mat-card-content>
+            <h2>Get In Touch</h2>
+            <p>
+              I'm always open to discussing new projects, creative ideas or
+              opportunities to be part of your vision.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <mat-icon>email</mat-icon>
+                <div>
+                  <h3>Email</h3>
+                  <p>
+                    <a href="mailto:jawadtamer97@gmail.com"
+                      >jawadtamer97&#64;gmail.com</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <mat-icon>phone</mat-icon>
+                <div>
+                  <h3>Phone</h3>
+                  <p><a href="tel:+201018529597">+201018529597</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <mat-icon>location_on</mat-icon>
+                <div>
+                  <h3>Location</h3>
+                  <p>Egypt</p>
+                </div>
+              </div>
+
+              <div class="social-links">
+                <h3>Connect With Me</h3>
+                <div class="social-buttons">
+                  <a
+                    href="https://github.com/jawadTamer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-button"
+                  >
+                    <fa-icon [icon]="faGithub" class="fa-lg"></fa-icon>
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/jawad-tamer-a2a720292"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-button"
+                  >
+                    <fa-icon [icon]="faLinkedin" class="fa-lg"></fa-icon>
+                    <span>LinkedIn</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="col-lg-6">
+        <mat-card class="contact-form-card">
+          <mat-card-content>
+            <h2>Send Me a Message</h2>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Name</mat-label>
+                <input
+                  matInput
+                  formControlName="name"
+                  placeholder="Your name"
+                  required
+                />
+                <mat-error *ngIf="contactForm.get('name')?.hasError('required')"
+                  >Name is required</mat-error
+                >
+                <mat-error
+                  *ngIf="contactForm.get('name')?.hasError('minlength')"
+                  >Name must be at least 2 characters</mat-error
+                >
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Email</mat-label>
+                <input
+                  matInput
+                  formControlName="email"
+                  placeholder="Your email"
+                  required
+                  type="email"
+                />
+                <mat-error
+                  *ngIf="contactForm.get('email')?.hasError('required')"
+                  >Email is required</mat-error
+                >
+                <mat-error *ngIf="contactForm.get('email')?.hasError('email')"
+                  >Please enter a valid email address</mat-error
+                >
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Subject</mat-label>
+                <input
+                  matInput
+                  formControlName="subject"
+                  placeholder="Subject"
+                  required
+                />
+                <mat-error
+                  *ngIf="contactForm.get('subject')?.hasError('required')"
+                  >Subject is required</mat-error
+                >
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Message</mat-label>
+                <textarea
+                  matInput
+                  formControlName="message"
+                  placeholder="Your message"
+                  rows="5"
+                  required
+                ></textarea>
+                <mat-error
+                  *ngIf="contactForm.get('message')?.hasError('required')"
+                  >Message is required</mat-error
+                >
+                <mat-error
+                  *ngIf="contactForm.get('message')?.hasError('minlength')"
+                  >Message must be at least 10 characters</mat-error
+                >
+              </mat-form-field>
+
+              <div class="form-actions">
+                <button
+                  mat-raised-button
+                  color="primary"
+                  type="submit"
+                  [disabled]="isSubmitting"
+                >
+                  <span *ngIf="!isSubmitting">Send Message</span>
+                  <mat-icon *ngIf="isSubmitting" class="spinner"
+                    >refresh</mat-icon
+                  >
+                </button>
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+<section class="projects-section">
+  <div class="container">
+    <div class="section-header">
+      <h1>My Projects</h1>
+      <p>Explore my latest work and development projects</p>
+    </div>
+
+    <div class="loading-spinner" *ngIf="isLoading">
+      <mat-spinner diameter="50"></mat-spinner>
+    </div>
+
+    <div class="row" *ngIf="!isLoading">
+      <div class="col-md-6 col-lg-4 mb-4" *ngFor="let project of projects">
+        <div class="project-card" #projectCard>
+          <div class="project-image">
+            <img
+              [src]="project.imageUrl"
+              [alt]="project.title"
+              *ngIf="project.imageUrl"
+              class="img-fluid"
+            />
+            <div class="project-placeholder" *ngIf="!project.imageUrl"></div>
+          </div>
+
+          <div class="project-details">
+            <h2>{{ project.title }}</h2>
+            <p class="project-description">{{ project.description }}</p>
+
+            <div class="tech-stack">
+              <h3>Technologies</h3>
+              <div class="tech-tags">
+                <span
+                  class="tech-tag"
+                  *ngFor="let tech of project.technologies"
+                  >{{ tech }}</span
+                >
+              </div>
+            </div>
+
+            <div class="project-links mt-3">
+              <a
+                mat-raised-button
+                color="primary"
+                [href]="project.demoUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                *ngIf="project.demoUrl"
+              >
+                <mat-icon>visibility</mat-icon> Live Demo
+              </a>
+              <a
+                mat-stroked-button
+                color="accent"
+                [href]="project.repoUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                *ngIf="project.repoUrl"
+                class="ms-2"
+              >
+                <mat-icon>code</mat-icon> Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty state if no projects -->
+    <div class="empty-state" *ngIf="!isLoading && projects.length === 0">
+      <mat-icon>folder_open</mat-icon>
+      <p>No projects found</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "title": "Recipes Sharing",
+    "description": "A responsive recipe-sharing platform using Angular 18 with API-driven data and favorites system.",
+    "technologies": ["Angular", "HTML5 & CSS3", "TypeScript", "Bootstrap", "RxJS", "Lottie", "Sweet alert","Git", "Netlify"],
+    "imageUrl": "assets/images/projects/recipe-sharin.png",
+    "demoUrl": "https://recipes-sharing.netlify.app/home",
+    "repoUrl": "https://github.com/jawadTamer/recipe-sharing",
+    "featured": true,
+    "date": "2024-03-15",
+    "category": "Web Development"
+  },
+  {
+    "id": "2",
+    "title": "Hospital Management System",
+    "description": "System to manage patients, appointments, and records using Angular 19 & Firebase. Includes SweetAlert, Angular Material, and Bootstrap UI.",
+    "technologies": ["Angular 19", "Firebase", "SweetAlert", "Angular Material", "Bootstrap", "Git", "Netlify"],
+    "imageUrl": "assets/images/projects/hospital.jpg",
+    "demoUrl": "https://hospital-system12.netlify.app/",
+    "repoUrl": "https://github.com/jawadTamer/Hospital-Management-System",
+    "featured": true,
+    "date": "2024-02-10",
+    "category": "Enterprise"
+  },
+  {
+    "id": "3",
+    "title": "AI Chatbot",
+    "description": "Interactive AI chatbot site with NLP features and real-time responses using APIs.",
+    "technologies": ["HTML", "CSS", "JavaScript", "APIs"],
+    "imageUrl": "assets/images/projects/chatbot.jpg",
+    "demoUrl": "https://jawad-chatbot.netlify.app/",
+    "repoUrl": "https://github.com/jawadTamer/ai-chatbot",
+    "featured": true,
+    "date": "2024-01-05",
+    "category": "AI/ML"
+  },
+  {
+    "id": "4",
+    "title": "ToDo App",
+    "description": "Task manager with CRUD operations and user auth, backed by a RESTful API deployed on Railway.",
+    "technologies": ["Angular", "Angular Material", "Bootstrap", "SweetAlert2", "JSON Server", "RxJS", "Angular HttpClient", "Netlify", "Railway", "Git", "Token"],
+    "imageUrl": "assets/images/projects/todo.jpg",
+    "demoUrl": "https://todo-app36.netlify.app/",
+    "repoUrl": "https://github.com/jawadTamer/todo-app",
+    "featured": false,
+    "date": "2023-12-20",
+    "category": "Productivity"
+  },
+  {
+    "id": "5",
+    "title": "Portfolio (React)",
+    "description": "Responsive portfolio built using React and Vite to showcase my projects and contact info.",
+    "technologies": ["React", "Vite"],
+    "imageUrl": "assets/images/projects/portfolio.jpg",
+    "demoUrl": "https://ahmed-mohamed10.netlify.app/",
+    "repoUrl": "https://github.com/jawadTamer/Ahmed-portfolio",
+    "featured": false,
+    "date": "2023-11-10",
+    "category": "Web Development"
+  },
+  {
+    "id": "6",
+    "title": "Similarity Game",
+    "description": "Memory matching game showcasing my UI design and frontend skills.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "imageUrl": "assets/images/projects/similarity.jpg",
+    "demoUrl": "https://similarity-game.netlify.app/",
+    "repoUrl": "https://github.com/jawadTamer/similarity-game",
+    "featured": false,
+    "date": "2023-10-15",
+    "category": "Gaming"
+  }
+] 

@@ -1,0 +1,38 @@
+/* Material Icons - Optimized subset */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  font-display: swap;
+  unicode-range: U+e0cd-e0e1, U+e0c8, U+e5cd-e5d2, U+e5d5, U+e86f, U+e8f4, U+e2c8;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Only include the icons we use */
+.material-icons {
+  &.menu:before { content: '\e5d2'; }
+  &.close:before { content: '\e5cd'; }
+  &.email:before { content: '\e0e1'; }
+  &.phone:before { content: '\e0cd'; }
+  &.location_on:before { content: '\e0c8'; }
+  &.visibility:before { content: '\e8f4'; }
+  &.code:before { content: '\e86f'; }
+  &.refresh:before { content: '\e5d5'; }
+  &.folder_open:before { content: '\e2c8'; }
+} 

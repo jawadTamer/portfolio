@@ -1,0 +1,40 @@
+<footer class="footer py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h3 class="footer-title">Jawad Tamer</h3>
+        <p class="footer-text">
+          Thank you for visiting my portfolio! Feel free to reach out for
+          collaborations or opportunities.
+        </p>
+      </div>
+
+      <div class="col-md-6 text-md-end">
+        <h3 class="footer-title">Connect With Me</h3>
+        <div class="social-links">
+          <a
+            *ngFor="let link of socialLinks"
+            [href]="link.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-button"
+            [attr.aria-label]="link.name"
+          >
+            <fa-icon [icon]="link.icon" class="fa-lg"></fa-icon>
+            <span class="ms-2 d-none d-sm-inline">{{ link.name }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="copyright">
+          &copy; {{ currentYear }} Jawad Tamer | All Rights Reserved
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

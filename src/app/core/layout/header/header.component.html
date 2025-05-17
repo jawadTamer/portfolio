@@ -1,0 +1,75 @@
+<mat-toolbar color="primary" class="mat-elevation-z6 header-toolbar">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center w-100">
+      <!-- Logo / Brand -->
+      <a routerLink="/" class="logo-link">
+        <span class="logo-text">Jawad Tamer</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="d-none d-md-flex">
+        <a
+          mat-button
+          routerLink="/"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+        <a mat-button routerLink="/about" routerLinkActive="active-link"
+          >About</a
+        >
+        <a mat-button routerLink="/projects" routerLinkActive="active-link"
+          >Projects</a
+        >
+        <a mat-button routerLink="/contact" routerLinkActive="active-link"
+          >Contact</a
+        >
+      </div>
+
+      <!-- Mobile Navigation Toggle Button -->
+      <button
+        mat-icon-button
+        class="d-md-none"
+        (click)="toggleMobileNav()"
+        aria-label="Toggle navigation"
+      >
+        <mat-icon>{{ isMobileNavOpen ? "close" : "menu" }}</mat-icon>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" [class.open]="isMobileNavOpen">
+      <div class="d-flex flex-column w-100">
+        <a
+          mat-button
+          routerLink="/"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMobileNav()"
+          >Home</a
+        >
+        <a
+          mat-button
+          routerLink="/about"
+          routerLinkActive="active-link"
+          (click)="closeMobileNav()"
+          >About</a
+        >
+        <a
+          mat-button
+          routerLink="/projects"
+          routerLinkActive="active-link"
+          (click)="closeMobileNav()"
+          >Projects</a
+        >
+        <a
+          mat-button
+          routerLink="/contact"
+          routerLinkActive="active-link"
+          (click)="closeMobileNav()"
+          >Contact</a
+        >
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
