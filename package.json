@@ -13,7 +13,9 @@
     "build:optimized": "npm run generate-icons && npm run optimize-assets && npm run build:prod",
     "analyze": "ng build --stats-json && webpack-bundle-analyzer dist/portfolio/stats.json",
     "analyze:js": "ng build --stats-json && webpack-bundle-analyzer dist/portfolio/stats.json --mode js",
-    "analyze:css": "ng build --stats-json && webpack-bundle-analyzer dist/portfolio/stats.json --mode css"
+    "analyze:css": "ng build --stats-json && webpack-bundle-analyzer dist/portfolio/stats.json --mode css",
+    "purgecss": "purgecss --css dist/portfolio/styles.css --content dist/portfolio/index.html dist/portfolio/**/*.js --output dist/portfolio/",
+    "build:prod:purged": "npm run build:prod && npm run purgecss"
   },
   "private": true,
   "dependencies": {
