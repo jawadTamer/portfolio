@@ -1,27 +1,68 @@
-# Portfolio
+# 🌐 Jawad Tamer | Personal Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+A modern, responsive portfolio website built with **Angular**, **Angular Material**, **Bootstrap**, **GSAP**, and **SweetAlert2** — designed to showcase my projects, skills, experience, and provide a way to contact me.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Live Demo
 
-## Code scaffolding
+🔗 **Live Website:** [https://jawad-tamer.netlify.app](https://jawad-tamer.netlify.app)  
+💻 **GitHub Repository:** [github.com/jawadTamer/portfolio](https://github.com/jawadTamer/portfolio)  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 📦 Tech Stack
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Angular 17+**
+- **Angular Material**
+- **Bootstrap 5**
+- **GSAP (GreenSock Animation Platform)**
+- **SweetAlert2**
+- **EmailJS (for contact form)**
+- **Netlify** (Hosting)
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📁 Features
 
-## Running end-to-end tests
+- ✅ Fully responsive and mobile-first design
+- ✅ Smooth animations with GSAP
+- ✅ Projects loaded dynamically via JSON
+- ✅ Skills, education, and experience from uploaded CV
+- ✅ SweetAlert2-powered contact form
+- ✅ Sends contact messages to your email
+- ✅ Modular Angular structure and lazy loading
+- ✅ PDF CV download button
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 📬 Contact Form Setup
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+You can use:
+
+### Option 1: EmailJS (no backend)
+- Setup EmailJS and configure template ID, service ID, and user ID in Angular
+
+
+---
+
+## 🧠 CV Data Used
+
+- **Name:** Jawad Tamer Hanafy  
+- **Title:** Front-End Developer  
+- **Email:** jawadtamer97@gmail.com  
+- **Phone:** +20 1018529597  
+- **GitHub:** [https://github.com/jawadTamer](https://github.com/jawadTamer)  
+- **LinkedIn:** [https://linkedin.com/in/jawad-tamer-a2a720292](https://linkedin.com/in/jawad-tamer-a2a720292)
+
+---
+
+## 🛠️ Run Locally
+
+```bash
+git clone https://github.com/jawadTamer/portfolio.git
+cd portfolio
+npm install
+ng serve
+````
+
