@@ -14,7 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 import { AlertService } from '../../core/services/alert.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import emailjs from '@emailjs/browser';
+import { send } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -74,18 +74,8 @@ export class ContactComponent implements OnInit {
     };
 
     try {
-      await emailjs.send(
-        SERVICE_ID,
-        NOTIFY_TEMPLATE_ID,
-        templateParams,
-        PUBLIC_KEY
-      );
-      await emailjs.send(
-        SERVICE_ID,
-        AUTOREPLY_TEMPLATE_ID,
-        templateParams,
-        PUBLIC_KEY
-      );
+      await send(SERVICE_ID, NOTIFY_TEMPLATE_ID, templateParams, PUBLIC_KEY);
+      await send(SERVICE_ID, AUTOREPLY_TEMPLATE_ID, templateParams, PUBLIC_KEY);
       this.isSubmitting = false;
       this.alertService.success(
         'Message Sent!',
