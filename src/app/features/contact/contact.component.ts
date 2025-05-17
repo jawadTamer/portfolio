@@ -43,7 +43,8 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     this.initForm();
   }
-
+ 
+  
   initForm(): void {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
